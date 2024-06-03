@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="output.css" />
+    <title>Women</title>
+  </head>
+  <body>
+    <header>
+      <div
+        class="bg-pink-800 text-white h-16 flex gap-3 items-center justify-between lg:px-20 px-4"
+      >
+        <a class="text-2xl hover:hoverEffect" href="index.html">
+          <i class="fa-solid fa-house"></i><span class="ps-2">Home</span></a
+        >
+        <h3 class="text-2xl font-semibold">Women Section</h3>
+        <p class="hidden md:block">
+          Flat 15% off for new users
+          <br />
+          <span class="text-sm">Use Coupon Code "NEW:15"</span>
+        </p>
+        <a class="text-center hover:cursor-pointer"
+          ><i class="fa-regular fa-heart"></i>
+          <p>Wishlist</p></a
+        >
+        <a
+          class="text-lg mt-5 hover:cursor-pointer flex items-center flex-col"
+          href="./productSummary.html"
+          ><i class="fa-solid fa-bag-shopping"></i>
+          <span>Bag</span>
+          <span
+            class="whitespace-nowrap text-center px-[6px] h-[18px] relative text-[16px] text-white left-[13px] -top-[40px] font-bold"
+            id="bagCount"
+          ></span
+        ></a>
+      </div>
+    </header>
+    <main>
+      <!-- for small screen Coupon code -->
+      <div class="bg-yellow-600 md:hidden">
+        <p class="py-2 animate-marquee whitespace-nowrap">
+          Extra 15% off for new users
+          <span class="text-sm text-white ms-1">Use Coupon Code "NEW:15"</span>
+        </p>
+      </div>
+      <div class="bg-gradient-to-br from-pink-400 via-sky-300 to-pink-400">
+        <div
+          class="py-10 grid lg:grid-cols-3 gap-6 items-start px-14"
+          id="productContainer"
+        ></div>
+        <p class="flex justify-end">
+          <a
+            href="#top"
+            class="flex flex-col items-center w-fit bg-blue-700 text-white p-4 text-xl rounded-full me-2"
+            ><i class="fa-solid fa-arrow-up"> </i>
+          </a>
+        </p>
+      </div>
+    </main>
+    <footer>
+      <p class="text-center py-1 bg-slate-400 text-gray-800">
+        © Frontend Developer 2024
+      </p>
+    </footer>
+    <script src="womenSection_dummyData.js"></script>
+    <script src="script.js"></script>
+    <!-- <script src="bag.js"></script> -->
+  </body>
+</html>
