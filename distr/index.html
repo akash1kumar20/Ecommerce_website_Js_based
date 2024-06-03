@@ -75,7 +75,6 @@
           src="./../distr/Images/images.jpg"
           class="h-16 ps-2 py-2 rounded-full hover:cursor-pointer"
         />
-
         <a
           class="text-center flex items-center justify-center gap-x-2 text-lg hover:border-b-4 border-orange-500 py-4"
           onclick="extendedMenu()"
@@ -88,7 +87,7 @@
             onclick="extendedMenu() "
           >
             <div
-              class="text-slate-100 bg-orange-500 font-semibold flex flex-col gap-3 py-6 text-left min-w-64 rounded-2xl ms-[8rem] px-16 shadow-2xl pb-14"
+              class="text-slate-100 bg-orange-500 font-semibold flex flex-col gap-3 text-left min-w-64 rounded-2xl ms-[8rem] px-16 shadow-2xl pb-12"
             >
               <a>Men</a>
               <a>Women</a>
@@ -125,5 +124,427 @@
         >
       </div>
     </header>
+    <main>
+      <!-- user Profile -->
+      <div
+        class="hidden absolute bg-pink-700 text-white max-w-64 rounded-lg mt-1 ms-[14rem] md:ms-[550px] lg:ms-[78%] pt-6 pb-20 px-4 z-20"
+        id="userProfile"
+        onclick="userProfileExpand()"
+      >
+        <h5 class="font-semibold text-lg">Welcome</h5>
+        <p class="text-xs">To access account and manage orders</p>
+        <button
+          class="border border-white px-2 py-1 my-3 hover:bg-white hover:text-pink-700 font-semibold"
+        >
+          LOGIN / SIGNUP
+        </button>
+        <div class="flex flex-col gap-3">
+          <a>Orders</a>
+          <a>Wishlist</a>
+          <a>Contact Us</a>
+          <a>Coupons</a>
+          <a>Saved address</a>
+        </div>
+      </div>
+      <!-- men section -->
+      <div class="hidden" id="menSection">
+        <div
+          class="bg-slate-900 absolute text-white flex gap-x-20 max-w-[80%] mx-[10%] pt-4 px-4 pb-16 z-10"
+        >
+          <div>
+            <h6 class="text-yellow-500">Topwear</h6>
+            <p class="my-2">T-shirts</p>
+            <p class="my-2">Casual Shirts</p>
+            <p class="my-2">Formal</p>
+            <p class="my-2">Party Wear</p>
+          </div>
+          <div>
+            <h6 class="text-yellow-500">Bottomwear</h6>
+            <p class="my-2">Jeans</p>
+            <p class="my-2">Joggers</p>
+            <p class="my-2">Shorts</p>
+            <p class="my-2">Track Pants</p>
+          </div>
+          <div>
+            <h6 class="text-yellow-500">Footwear</h6>
+            <p class="my-2">Casual shoes</p>
+            <p class="my-2">Formal shoes</p>
+            <p class="my-2">Sandals</p>
+            <p class="my-2">Sneakers</p>
+          </div>
+          <div>
+            <h6 class="text-yellow-500">Fashion Accessiores</h6>
+            <p class="my-2">Wallet</p>
+            <p class="my-2">Belt</p>
+            <p class="my-2">Watches</p>
+            <p class="my-2">Perfumes</p>
+          </div>
+        </div>
+      </div>
+      <!-- women section -->
+      <div class="hidden" id="womenSection">
+        <div
+          class="bg-slate-900 absolute text-white flex gap-x-20 max-w-[80%] mx-[10%] pt-4 px-4 pb-16 z-10"
+        >
+          <div>
+            <h6 class="text-yellow-500">Indian Wear</h6>
+            <p class="my-2">Kurtis</p>
+            <p class="my-2">Suits</p>
+            <p class="my-2">Saree</p>
+            <p class="my-2">Ethnic Wear</p>
+          </div>
+          <div>
+            <h6 class="text-yellow-500">Western Wear</h6>
+            <p class="my-2">Dress</p>
+            <p class="my-2">Shirt & T-shirt</p>
+            <p class="my-2">Shorts</p>
+            <p class="my-2">Track Pants</p>
+          </div>
+          <div>
+            <h6 class="text-yellow-500">Footwear</h6>
+            <p class="my-2">Casual shoes</p>
+            <p class="my-2">Hills</p>
+            <p class="my-2">Sandals</p>
+            <p class="my-2">Sneakers</p>
+          </div>
+          <div>
+            <h6 class="text-yellow-500">Fashion Accessiores</h6>
+            <p class="my-2">Wallet</p>
+            <p class="my-2">Makeup</p>
+            <p class="my-2">Watches</p>
+            <p class="my-2">Perfumes</p>
+          </div>
+        </div>
+      </div>
+      <!-- main section -->
+      <div
+        class="top-16 bg-gradient-to-br from-purple-300 via-orange-300 to-sky-300"
+      >
+        <!-- here section -->
+        <!-- hero image -->
+        <div
+          class="mb-14 bg-[url('./Images/photo-1494253109108-2e30c049369b.jpg')] bg-cover"
+        >
+          <h3
+            class="text-3xl font-semibold text-center z-10 text-white pt-4 mb-4"
+          >
+            End of season sale is live now
+          </h3>
+          <span class="flex justify-between items-center px-8">
+            <img
+              src="https://images.unsplash.com/photo-1526178613552-2b45c6c302f0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="max-w-48 rounded-full text-end drop-shadow-md"
+            />
+            <span
+              class="hidden md:block text-white text-xl text-center uppercase font-mono"
+              >shop at lowest price <br />before sales end<br />
+              <button
+                class="bg-white text-blue-800 px-4 py-2 rounded-lg font-semibold drop-shadow-lg mt-2"
+              >
+                Shop Now
+              </button></span
+            >
+            <img
+              src="https://images.unsplash.com/photo-1607082349566-187342175e2f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              class="max-w-48 rounded-full text-end drop-shadow-md"
+            />
+          </span>
+        </div>
+        <!-- product section -->
+        <div
+          class="bg-white lg:grid grid-cols-3 gap-x-2 text-black lg:mx-14 mx-[5%] mb-10 p-2"
+        >
+          <!-- category one -->
+          <a
+            class="bg-gray-400 py-2 mb-2 flex flex-col items-center"
+            href="men.html"
+            target="_parent"
+          >
+            <h2 class="text-white font-bold text-4xl">Men</h2>
+            <img
+              src="https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWVuJTIwZmFzaGlvbnxlbnwwfHwwfHx8Mg%3D%3D"
+              alt="For men"
+              class="w-[385px] h-[250px] px-4 py-2 rounded-md"
+            />
+            <button
+              class="bg-blue-700 text-white text-lg px-4 py-2 rounded-lg drop-shadow-lg"
+            >
+              Shop Now
+            </button>
+          </a>
+          <!-- category two -->
+          <a
+            class="bg-gray-400 py-2 mb-2 flex flex-col items-center"
+            href="women.html"
+            target="_parent"
+          >
+            <h2 class="text-white font-bold text-4xl">Women</h2>
+            <img
+              src="https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHdvbWVuJTIwZmFzaGlvbnxlbnwwfHwwfHx8Mg%3D%3D"
+              alt="For women"
+              class="w-[385px] h-[250px] px-4 py-2 rounded-md"
+            />
+            <button
+              class="bg-blue-700 text-white text-lg px-4 py-2 rounded-lg drop-shadow-lg"
+            >
+              Shop Now
+            </button>
+          </a>
+          <!-- category three -->
+          <div class="bg-gray-400 py-2 mb-2 flex flex-col items-center">
+            <h2 class="text-white font-bold text-4xl">Footwear</h2>
+            <img
+              src="https://images.unsplash.com/photo-1556774687-0e2fdd0116c0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Zm9vdHdlYXJ8ZW58MHx8MHx8fDI%3D"
+              alt="Footwear"
+              class="w-[385px] h-[250px] px-4 py-2 rounded-md"
+            />
+            <button
+              class="bg-blue-700 text-white text-lg px-4 py-2 rounded-lg drop-shadow-lg"
+            >
+              Shop Now
+            </button>
+          </div>
+          <!-- category four -->
+          <div class="bg-gray-400 py-2 mb-2 flex flex-col items-center">
+            <h2 class="text-white font-bold text-4xl">Food & Items</h2>
+            <img
+              src="https://images.unsplash.com/photo-1430163393927-3dab9af7ea38?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Zm9vZCUyMCUyNiUyMGl0ZW1zfGVufDB8fDB8fHwy"
+              alt="Food & Items"
+              class="w-[385px] h-[250px] px-4 py-2 rounded-md"
+            />
+            <button
+              class="bg-blue-700 text-white text-lg px-4 py-2 rounded-lg drop-shadow-lg"
+            >
+              Shop Now
+            </button>
+          </div>
+          <!-- category five -->
+          <div class="bg-gray-400 py-2 mb-2 flex flex-col items-center">
+            <h2 class="text-white font-bold text-4xl">Combo</h2>
+            <img
+              src="./Images/combo/photo-1543322748-33df6d3db806.jpg"
+              alt="Combo"
+              class="w-[385px] h-[250px] px-4 py-2 rounded-md"
+            />
+            <button
+              class="bg-blue-700 text-white text-lg px-4 py-2 rounded-lg drop-shadow-lg"
+            >
+              Shop Now
+            </button>
+          </div>
+          <!-- category six -->
+          <div class="bg-gray-400 py-2 mb-2 flex flex-col items-center">
+            <h2 class="text-white font-bold text-4xl">Fashion & Need</h2>
+            <img
+              src="https://images.unsplash.com/photo-1506152983158-b4a74a01c721?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZhc2hpb24lMjBuZWVkfGVufDB8fDB8fHwy"
+              alt="Fashion Needs"
+              class="w-[385px] h-[250px] px-4 py-2 rounded-md"
+            />
+            <button
+              class="bg-blue-700 text-white text-lg px-4 py-2 rounded-lg drop-shadow-lg"
+            >
+              Shop Now
+            </button>
+          </div>
+        </div>
+        <!-- </div> -->
+        <!-- today's deal container -->
+        <div class="lg:flex justify-evenly">
+          <!-- for small screen only -->
+          <div
+            class="lg:hidden flex text-white gap-2 justify-center items-center text-lg bg-slate-500 font-semibold px-3 py-2 mx-6 mb-4"
+          >
+            <i
+              class="fa-regular fa-hand-point-left fa-rotate-270"
+              style="color: #ffd43b"
+            ></i>
+            <p class="uppercase">Deals of the day</p>
+            <i
+              class="fa-regular fa-hand-point-right fa-rotate-90"
+              style="color: #ffd43b"
+            ></i>
+          </div>
+          <!-- today's deal section 1 -->
+          <div class="mx-6 px-2 pt-12 w-fit bg-slate-400 pb-4">
+            <h2 class="text-5xl font-semibold text-white text-center">Shoes</h2>
+            <div class="flex gap-3 mt-10">
+              <div class="flex flex-col gap-3">
+                <img
+                  src="./Images/shoes/photo-1542841791-1925b02a2bbb.jpg"
+                  class="productImage"
+                />
+                <img
+                  src="./Images/shoes/photo-1514989940723-e8e51635b782.jpg"
+                  class="productImage"
+                />
+              </div>
+              <div class="flex items-center">
+                <img
+                  src="./Images/shoes/photo-1542594628-4c90ca8271a7.jpg"
+                  class="productImage"
+                />
+              </div>
+              <div class="flex flex-col gap-3">
+                <img
+                  src="./Images/shoes/photo-1463100099107-aa0980c362e6.jpg"
+                  class="productImage"
+                />
+                <img
+                  src="./Images/shoes/photo-1556906781-9a412961c28c.jpg"
+                  class="productImage"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- mid section -->
+          <div
+            class="hidden text-xl lg:block text-white bg-slate-500 px-10 py-2 font-semibold text-center z-0"
+          >
+            <i
+              class="fa-regular fa-hand-point-right fa-beat fa-lg"
+              style="color: #ffd43b"
+            ></i>
+            <p>D</p>
+            <p>E</p>
+            <p>A</p>
+            <p>L</p>
+            <p>S</p>
+            <br />
+            <p>O</p>
+            <p>F</p>
+            <br />
+            <p>T</p>
+            <p>H</p>
+            <p>E</p>
+
+            <br />
+            <p>D</p>
+            <p>A</p>
+            <p>Y</p>
+            <i
+              class="fa-regular fa-hand-point-left fa-beat fa-lg"
+              style="color: #ffd43b"
+            ></i>
+          </div>
+          <!-- today's deal section 2 -->
+          <div class="mx-6 px-2 pt-12 w-fit bg-slate-400 pb-4 mt-10 lg:mt-0">
+            <h2 class="text-5xl font-semibold text-white text-center">
+              Watches
+            </h2>
+            <div class="flex gap-3 mt-10">
+              <div class="flex flex-col gap-3">
+                <img
+                  src="./Images/watches/photo-1623998021450-85c29c644e0d.jpg"
+                  class="productImage"
+                />
+                <img
+                  src="./Images/watches/photo-1601281866896-1576541e77a1.jpg"
+                  class="productImage"
+                />
+              </div>
+              <div class="flex items-center">
+                <img
+                  src="./Images/watches/photo-1559356157-2c37928cae1b.jpg"
+                  class="productImage"
+                />
+              </div>
+              <div class="flex flex-col gap-3">
+                <img
+                  src="./Images/watches/photo-1624106159879-8a16d53c54ff.jpg"
+                  class="productImage"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1507680434567-5739c80be1ac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTZ8MTk0ODcxOHx8ZW58MHx8fHx8"
+                  class="productImage"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="flex justify-end mt-14">
+          <a
+            href="#top"
+            class="flex flex-col items-center w-fit bg-blue-700 text-white p-4 text-xl rounded-full me-2"
+            ><i class="fa-solid fa-arrow-up"> </i>
+          </a>
+        </p>
+      </div>
+    </main>
+    <footer>
+      <div
+        class="bg-slate-300 lg:flex justify-between border-4 border-t-orange-400 pt-14 px-20 pb-6"
+      >
+        <div class="text-slate-500 mb-4">
+          <h5 class="uppercase text-black">Customer policies</h5>
+          <p>Contact Us</p>
+          <p>FAQ</p>
+          <p>T&C</p>
+          <p>Track Orders</p>
+          <p>Cancellation</p>
+          <p>Returns</p>
+        </div>
+        <div class="mb-4">
+          <h5 class="uppercase text-black text-sm">
+            EXPERIENCE MYNTRA APP ON MOBILE
+          </h5>
+          <!-- buttons container -->
+          <div class="flex gap-4 mt-4">
+            <div class="flex text-white bg-black w-fit px-4 py-1 rounded-md">
+              <div class="flex items-center">
+                <i
+                  class="fa-solid fa-play text-2xl me-2"
+                  style="color: #d2a360"
+                ></i>
+              </div>
+              <div>
+                <p class="uppercase text-xs font-light">Get it on</p>
+                <p>Google Play</p>
+              </div>
+            </div>
+            <div class="flex text-white bg-black w-fit px-4 py-1 rounded-md">
+              <div class="flex items-center">
+                <i
+                  class="fa-brands fa-apple text-2xl me-2"
+                  style="color: #ffffff"
+                ></i>
+              </div>
+              <div>
+                <p class="uppercase text-xs font-light">Download on the</p>
+                <p>App Store</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-6">
+            <h6 class="text-xs">KEEP IN TOUCH</h6>
+            <div class="flex gap-3">
+              <span><i class="fa-brands fa-facebook"></i></span>
+              <span><i class="fa-brands fa-instagram"></i></span>
+              <span><i class="fa-brands fa-twitter"></i></span>
+              <span><i class="fa-brands fa-youtube"></i></span>
+            </div>
+          </div>
+        </div>
+        <div class="text-slate-500 mb-4">
+          <div class="flex gap-3 items-center justify-between">
+            <i class="fa-solid fa-stamp text-4xl"></i>
+            <p class="mb-3 text-end">
+              100% ORIGINAL guarantee for<br />
+              all products at myntra.com
+            </p>
+          </div>
+          <div class="flex gap-3 items-center justify-between">
+            <i class="fa-regular fa-calendar-days text-4xl"></i>
+            <p>
+              Return within 14days of<br />
+              receiving your order
+            </p>
+          </div>
+        </div>
+      </div>
+      <p class="text-center py-1 bg-slate-400 text-gray-800">
+        © Frontend Developer 2024
+      </p>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -6,4 +6,7 @@
   .inputTextArea {
     @apply bg-white text-black py-1 ps-2 pe-24 rounded-2xl;
   }
+  .productImage {
+    @apply rounded-md border-2 border-white drop-shadow-2xl shadow-black hover:scale-125 transition-transform shadow-2xl;
+  }
 }
