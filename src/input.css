@@ -7,6 +7,20 @@
     @apply bg-white text-black py-1 ps-2 pe-24 rounded-2xl;
   }
   .productImage {
-    @apply rounded-md border-2 border-white drop-shadow-2xl shadow-black hover:scale-125 transition-transform shadow-2xl;
+    @apply rounded-md border-2 border-white drop-shadow-2xl shadow-black hover:scale-125  shadow-2xl;
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(calc(10%));
+    }
+  }
+  .animate-marquee {
+    animation: marquee 5s ease-in-out infinite;
+  }
+  .inputStyleMan {
+    @apply bg-sky-200 w-8 p-1 text-sm font-semibold rounded-sm;
   }
 }

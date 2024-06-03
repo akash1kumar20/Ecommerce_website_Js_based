@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="output.css" />
+    <title>Men</title>
+  </head>
+  <body>
+    <header>
+      <div
+        class="bg-slate-900 text-white h-16 flex gap-3 items-center justify-between lg:px-20 px-4"
+      >
+        <a class="text-2xl hover:hoverEffect" href="index.html">
+          <i class="fa-solid fa-house"></i><span class="ps-2">Home</span></a
+        >
+        <h3 class="text-2xl font-semibold">Men Section</h3>
+        <p class="hidden md:block">
+          Flat 15% off for new users
+          <br />
+          <span class="text-sm">Use Coupon Code "NEW:15"</span>
+        </p>
+        <a class="text-center hover:cursor-pointer"
+          ><i class="fa-regular fa-heart"></i>
+          <p>Wishlist</p></a
+        >
+        <a class="text-center hover:cursor-pointer"
+          ><i class="fa-solid fa-bag-shopping"></i>
+          <p>Bag</p></a
+        >
+      </div>
+    </header>
+    <main>
+      <!-- for small screen Coupon code -->
+      <div class="bg-yellow-600 md:hidden">
+        <p class="py-2 animate-marquee whitespace-nowrap">
+          Extra 15% off for new users
+          <span class="text-sm text-white ms-1">Use Coupon Code "NEW:15"</span>
+        </p>
+      </div>
+      <div class="bg-gradient-to-br from-blue-500 via-gray-500 to-white">
+        <div class="py-10 grid lg:grid-cols-3 gap-6 items-start px-14">
+          <!-- product one -->
+          <div class="bg-white px-10 py-4 rounded-xl">
+            <img
+              src="https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVuJTIwc2hpcnRzfGVufDB8fDB8fHwy"
+              class="h-[400px] w-[300px] drop-shadow-2xl rounded-xl"
+              aria-controls="formSize1"
+            />
+            <!-- product details -->
+            <div>
+              <!-- rating & reviews -->
+              <span
+                class="bg-white py-1 border border-black absolute -translate-y-9 rounded-lg px-1 ms-2 text-sm opacity-70"
+              >
+                4 <i class="fa-solid fa-star" style="color: #74c0fc"></i> |
+                432</span
+              >
+              <!-- comapny name -->
+              <h5 class="uppercase font-semibold text-lg">Rare Rabit</h5>
+              <!-- product discription -->
+              <p class="capitalize text-sm text-slate-600">
+                Slim fit printed casual shirt
+              </p>
+              <!-- prices -->
+              <p class="space-x-1">
+                <span class="font-semibold">Rs. 1599</span>
+                <span class="text-slate-500 text-sm line-through">
+                  Rs. 3199</span
+                >
+                <span class="text-orange-600 text-sm"> (50% OFF)</span>
+              </p>
+              <!-- size cart -->
+              <form class="hidden" id="formSize1">
+                <p class="flex mt-2 gap-x-5">
+                  <span class="border border-black p-1"
+                    ><input
+                      type="text"
+                      value="XS"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-black p-1"
+                    ><input
+                      value="S"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-black p-1"
+                    ><input
+                      value="MD"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-black p-1"
+                    ><input
+                      value="LG"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-black p-1"
+                    ><input
+                      value="XL"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                </p>
+                <div class="mt-3">
+                  <button
+                    type="submit"
+                    class="uppercase bg-blue-600 text-white px-6 py-2 rounded-md"
+                  >
+                    Add to Bag
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- product two -->
+          <div class="bg-black px-10 py-4 rounded-xl">
+            <img
+              src="https://images.unsplash.com/photo-1547701865-941c3731e8af?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1lbiUyMGZvb3R3ZWFyfGVufDB8fDB8fHwy"
+              class="h-[400px] w-[300px] drop-shadow-2xl rounded-xl"
+              aria-controls="formSize2"
+            />
+            <!-- product details -->
+            <div>
+              <!-- rating & reviews -->
+              <span
+                class="bg-white py-1 border border-black absolute -translate-y-9 rounded-lg px-1 ms-2 text-sm opacity-70"
+              >
+                4.2 <i class="fa-solid fa-star" style="color: #74c0fc"></i> |
+                10k</span
+              >
+              <!-- comapny name -->
+              <h5 class="uppercase font-semibold text-lg text-white">
+                U.s. polo assn.
+              </h5>
+              <!-- product discription -->
+              <p class="capitalize text-sm text-slate-400">
+                men clarkin sneakers
+              </p>
+              <!-- prices -->
+              <p class="space-x-1">
+                <span class="font-semibold text-white">Rs. 1349</span>
+                <span class="text-slate-500 text-sm line-through">
+                  Rs. 2999</span
+                >
+                <span class="text-orange-600 text-sm"> (55% OFF)</span>
+              </p>
+              <!-- size cart -->
+              <form class="hidden" id="formSize2">
+                <p class="flex mt-2 gap-x-5">
+                  <span class="border border-white p-1"
+                    ><input
+                      type="text"
+                      value="6"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-white p-1"
+                    ><input
+                      value="7"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-white p-1"
+                    ><input
+                      value="8"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-white p-1"
+                    ><input
+                      value="9"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-white p-1"
+                    ><input
+                      value="10"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                </p>
+                <div class="mt-3">
+                  <button
+                    type="submit"
+                    class="uppercase bg-blue-600 text-white px-6 py-2 rounded-md"
+                  >
+                    Add to Bag
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- product three -->
+          <div class="bg-white px-10 py-4 drop-shadow-2xl rounded-xl">
+            <img
+              src="https://images.unsplash.com/photo-1618001789159-ffffe6f96ef2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWVuJTIwc2hpcnR8ZW58MHx8MHx8fDI%3D"
+              class="h-[400px] w-[300px] drop-shadow-2xl rounded-xl"
+              aria-controls="formSize3"
+            />
+            <!-- product details -->
+            <div>
+              <!-- rating & reviews -->
+              <span
+                class="bg-white py-1 border border-black absolute -translate-y-9 rounded-lg px-1 ms-2 text-sm opacity-70"
+              >
+                4 <i class="fa-solid fa-star" style="color: #74c0fc"></i> |
+                4320</span
+              >
+              <!-- comapny name -->
+              <h5 class="uppercase font-semibold text-lg">Louis Philippe</h5>
+              <!-- product discription -->
+              <p class="capitalize text-sm text-slate-600">
+                pure cotton slim fit shirt
+              </p>
+              <!-- prices -->
+              <p class="space-x-1">
+                <span class="font-semibold">Rs. 1149</span>
+                <span class="text-slate-500 text-sm line-through">
+                  Rs. 2299</span
+                >
+                <span class="text-orange-600 text-sm"> (50% OFF)</span>
+              </p>
+              <!-- size cart -->
+              <form class="hidden" id="formSize3">
+                <p class="flex mt-2 gap-x-5">
+                  <span class="border border-black p-1"
+                    ><input
+                      type="text"
+                      value="XS"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-black p-1"
+                    ><input
+                      value="S"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-black p-1"
+                    ><input
+                      value="MD"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-black p-1"
+                    ><input
+                      value="LG"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-black p-1"
+                    ><input
+                      value="XL"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                </p>
+                <div class="mt-3">
+                  <button
+                    type="submit"
+                    class="uppercase bg-blue-600 text-white px-6 py-2 rounded-md"
+                  >
+                    Add to Bag
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- product four -->
+          <div class="bg-white px-10 py-4 rounded-xl">
+            <img
+              src="https://images.unsplash.com/photo-1511196044526-5cb3bcb7071b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWVuJTIwamVhbnN8ZW58MHx8MHx8fDI%3D"
+              class="h-[400px] w-[300px] drop-shadow-2xl rounded-xl"
+              aria-controls="formSize4"
+            />
+            <!-- product details -->
+            <div>
+              <!-- rating & reviews -->
+              <span
+                class="bg-white py-1 border border-black absolute -translate-y-9 rounded-lg px-1 ms-2 text-sm opacity-70"
+              >
+                4.3 <i class="fa-solid fa-star" style="color: #74c0fc"></i> |
+                3.4k</span
+              >
+              <!-- comapny name -->
+              <h5 class="uppercase font-semibold text-lg">Levis</h5>
+              <!-- product discription -->
+              <p class="capitalize text-sm text-slate-600">
+                men slim fit jeans
+              </p>
+              <!-- prices -->
+              <p class="space-x-1">
+                <span class="font-semibold">Rs. 1055</span>
+                <span class="text-slate-500 text-sm line-through">
+                  Rs. 3199</span
+                >
+                <span class="text-orange-600 text-sm"> (67% OFF)</span>
+              </p>
+              <!-- size cart -->
+              <form class="hidden" id="formSize4">
+                <p class="flex mt-2 gap-x-5">
+                  <span class="border border-black p-1"
+                    ><input
+                      type="text"
+                      value="XS"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-black p-1"
+                    ><input
+                      value="S"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-black p-1"
+                    ><input
+                      value="MD"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-black p-1"
+                    ><input
+                      value="LG"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-black p-1"
+                    ><input
+                      value="XL"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                </p>
+                <div class="mt-3">
+                  <button
+                    type="submit"
+                    class="uppercase bg-blue-600 text-white px-6 py-2 rounded-md"
+                  >
+                    Add to Bag
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- product five -->
+          <div class="bg-black px-10 py-4 rounded-xl">
+            <img
+              src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bWVuJTIwc2hvZXN8ZW58MHx8MHx8fDI%3D"
+              class="h-[400px] w-[300px] drop-shadow-2xl rounded-xl"
+              aria-controls="formSize5"
+            />
+            <!-- product details -->
+            <div>
+              <!-- rating & reviews -->
+              <span
+                class="bg-white py-1 border border-black absolute -translate-y-9 rounded-lg px-1 ms-2 text-sm opacity-70"
+              >
+                4.2 <i class="fa-solid fa-star" style="color: #74c0fc"></i> |
+                11.8k</span
+              >
+              <!-- comapny name -->
+              <h5 class="uppercase font-semibold text-lg text-white">puma</h5>
+              <!-- product discription -->
+              <p class="capitalize text-sm text-slate-400">
+                smashic casual sneakers
+              </p>
+              <!-- prices -->
+              <p class="space-x-1">
+                <span class="font-semibold text-white">Rs. 1574</span>
+                <span class="text-slate-500 text-sm line-through">
+                  Rs. 4499</span
+                >
+                <span class="text-orange-600 text-sm"> (65% OFF)</span>
+              </p>
+              <!-- size cart -->
+              <form class="hidden" id="formSize5">
+                <p class="flex mt-2 gap-x-5">
+                  <span class="border border-white p-1"
+                    ><input
+                      type="text"
+                      value="6"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-white p-1"
+                    ><input
+                      value="7"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-white p-1"
+                    ><input
+                      value="8"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-white p-1"
+                    ><input
+                      value="9"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-white p-1"
+                    ><input
+                      value="10"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                </p>
+                <div class="mt-3">
+                  <button
+                    type="submit"
+                    class="uppercase bg-blue-600 text-white px-6 py-2 rounded-md"
+                  >
+                    Add to Bag
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- product six -->
+          <div class="bg-white px-10 py-4 rounded-xl">
+            <img
+              src="https://images.unsplash.com/photo-1608366558876-185ea88608eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWVuJTIwamVhbnN8ZW58MHx8MHx8fDI%3D"
+              class="h-[400px] w-[300px] drop-shadow-2xl rounded-xl"
+              aria-controls="formSize6"
+            />
+            <!-- product details -->
+            <div>
+              <!-- rating & reviews -->
+              <span
+                class="bg-white py-1 border border-black absolute -translate-y-9 rounded-lg px-1 ms-2 text-sm opacity-70"
+              >
+                3.8 <i class="fa-solid fa-star" style="color: #74c0fc"></i> |
+                532</span
+              >
+              <!-- comapny name -->
+              <h5 class="uppercase font-semibold text-lg">Snitch</h5>
+              <!-- product discription -->
+              <p class="capitalize text-sm text-slate-600">
+                Men slim fit Jeans
+              </p>
+              <!-- prices -->
+              <p class="space-x-1">
+                <span class="font-semibold">Rs. 799</span>
+                <span class="text-slate-500 text-sm line-through">
+                  Rs. 1199</span
+                >
+                <span class="text-orange-600 text-sm"> (61% OFF)</span>
+              </p>
+              <!-- size cart -->
+              <form class="hidden" id="formSize6">
+                <p class="flex mt-2 gap-x-5">
+                  <span class="border border-black p-1"
+                    ><input
+                      type="text"
+                      value="XS"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-black p-1"
+                    ><input
+                      value="S"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-black p-1"
+                    ><input
+                      value="MD"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-black p-1"
+                    ><input
+                      value="LG"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                  <span class="border border-black p-1"
+                    ><input
+                      value="XL"
+                      type="text"
+                      class="inputStyleMan"
+                      readonly
+                      name="size"
+                  /></span>
+                </p>
+                <div class="mt-3">
+                  <button
+                    type="submit"
+                    class="uppercase bg-blue-600 text-white px-6 py-2 rounded-md"
+                  >
+                    Add to Bag
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <p class="flex justify-end">
+          <a
+            href="#top"
+            class="flex flex-col items-center w-fit bg-blue-700 text-white p-4 text-xl rounded-full me-2"
+            ><i class="fa-solid fa-arrow-up"> </i>
+          </a>
+        </p>
+      </div>
+    </main>
+    <footer>
+      <p class="text-center mb-2 bg-slate-400 text-gray-800">
+        © Frontend Developer 2024
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

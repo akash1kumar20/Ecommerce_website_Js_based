@@ -13,3 +13,26 @@ function womenSectionExp() {
 function searchSpanExp() {
   document.querySelector("#SearchSpan").classList.toggle("hidden");
 }
+
+//to make size category button visible and hide in men
+let imgElements = document.querySelectorAll("img");
+imgElements.forEach((element) => {
+  element.addEventListener("mouseenter", () => {
+    const formId = element.getAttribute("aria-controls");
+    const formElement = document.getElementById(formId);
+    if (!formElement) {
+      return;
+    }
+    formElement.classList.toggle("hidden");
+  });
+});
+imgElements.forEach((element) => {
+  element.addEventListener("mouseleave", () => {
+    const formId = element.getAttribute("aria-controls");
+    const formElement = document.getElementById(formId);
+    if (!formElement) {
+      return;
+    }
+    formElement.classList.toggle("hidden");
+  });
+});
