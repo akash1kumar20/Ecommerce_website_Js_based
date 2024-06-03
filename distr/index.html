@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="output.css" />
+    <title>Ecommerce website</title>
+  </head>
+  <body>
+    <header>
+      <!-- navbar for larger screen -->
+      <div
+        class="hidden bg-slate-900 text-white h-16 lg:flex gap-3 items-center justify-between pe-4"
+      >
+        <img
+          src="./../distr/Images/images.jpg"
+          class="h-16 ps-4 py-2 rounded-full hover:cursor-pointer"
+        />
+        <a
+          class="hover:border-b-4 border-yellow-500 py-4"
+          onclick="menSectionExp()"
+          >Men</a
+        >
+
+        <a
+          class="hover:border-b-4 border-yellow-500 py-4"
+          onclick="womenSectionExp()"
+          >Women</a
+        >
+        <a class="hover:border-b-4 border-orange-500 py-4">Footwear</a>
+        <a class="hover:border-b-4 border-orange-500 py-4">Food & Items</a>
+        <a class="hover:border-b-4 border-sky-400 py-4">Fashion & Need</a>
+        <a class="hover:border-b-4 border-sky-400 py-4">Combo</a>
+        <div class="inputTextArea">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="text"
+            placeholder="Search for products here"
+            class="ms-3"
+          />
+        </div>
+        <a
+          class="text-center hover:border-b-4 border-pink-700 py-1"
+          onclick="userProfileExpand()"
+          ><i class="fa-regular fa-user"></i>
+          <p>Profile</p></a
+        >
+        <a class="text-center hover:cursor-pointer"
+          ><i class="fa-regular fa-heart"></i>
+          <p>Wishlist</p></a
+        >
+        <a
+          class="text-lg mt-5 hover:cursor-pointer flex items-center flex-col"
+          href="./productSummary.html"
+          ><i class="fa-solid fa-bag-shopping"></i>
+          <span>Bag</span>
+          <span
+            class="whitespace-nowrap text-center px-[6px] h-[18px] relative text-[16px] text-white left-[13px] -top-[40px] font-bold"
+            id="bagCount"
+          ></span
+        ></a>
+      </div>
+      <!-- navbar for small screen -->
+      <div
+        class="lg:hidden bg-slate-900 text-white h-16 flex gap-3 items-center justify-between pe-6"
+      >
+        <img
+          src="./../distr/Images/images.jpg"
+          class="h-16 ps-2 py-2 rounded-full hover:cursor-pointer"
+        />
+
+        <a
+          class="text-center flex items-center justify-center gap-x-2 text-lg hover:border-b-4 border-orange-500 py-4"
+          onclick="extendedMenu()"
+          ><i class="fa-solid fa-bars"></i>
+          <p>Menu</p>
+          <!-- extend menu -->
+          <div
+            class="hidden absolute top-10 lg:hidden z-20"
+            id="extendMenu"
+            onclick="extendedMenu() "
+          >
+            <div
+              class="text-slate-100 bg-orange-500 font-semibold flex flex-col gap-3 py-6 text-left min-w-64 rounded-2xl ms-[8rem] px-16 shadow-2xl pb-14"
+            >
+              <a>Men</a>
+              <a>Women</a>
+              <a>Footwear</a>
+              <a>Food & Items</a>
+              <a>Fashion & Need</a>
+              <a>Combo</a>
+            </div>
+          </div>
+        </a>
+        <a
+          class="text-center text-lg flex items-center justify-center hover:cursor-pointer"
+          ><i
+            class="fa-solid fa-magnifying-glass inputTextAreaSm"
+            onmouseenter="searchSpanExp()"
+            onmouseleave="searchSpanExp()"
+          ></i>
+          <span
+            class="hidden text-sm absolute top-16 text-black"
+            id="SearchSpan"
+            >Search here</span
+          >
+        </a>
+        <a
+          class="text-center flex items-center gap-x-2 text-lg hover:border-b-4 border-pink-700 py-4"
+          onclick="userProfileExpand()"
+          ><i class="fa-regular fa-user"></i>
+          <p>Profile</p></a
+        >
+        <a
+          class="text-center flex items-center gap-x-2 text-lg hover:cursor-pointer"
+          ><i class="fa-solid fa-bag-shopping"></i>
+          <p>Bag</p></a
+        >
+      </div>
+    </header>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .inputTextArea {
+    @apply bg-white text-black py-1 ps-2 pe-24 rounded-2xl;
+  }
+}
