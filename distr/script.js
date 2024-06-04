@@ -160,7 +160,22 @@ function displayPriceSummary() {
       (bagItems.discount_percentage * bagItems.original_price) / 100
     );
     finalPrice = totalMRP - totalDiscount;
+    if (finalPrice > 3500) {
+      document.querySelector(
+        "#couponCode"
+      ).innerHTML = `<p class="text-sm text-slate-500">"Coupon Applied: SBI10"</p>`;
+      document.querySelector("#couponButton").style.visibility = "hidden";
+      couponDiscount = (finalPrice * 10) / 100;
+    } else {
+      document.querySelector(
+        "#couponCode"
+      ).innerHTML = `<i class="fa-solid fa-tag"></i> Apply Coupons`;
+      document.querySelector("#couponButton").style.visibility = "block";
+    }
+
+    finalPrice = Math.ceil(finalPrice - couponDiscount);
   });
+
   priceSummaryDiv.innerHTML = `<div>
               <p class="uppercase text-sm font-semibold">Price details (${totalItems}) items</p>
               <p class="text-sm text-slate-500 my-1">Total MRP</p>
