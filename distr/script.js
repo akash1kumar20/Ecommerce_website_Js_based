@@ -40,6 +40,7 @@ imgElements.forEach((element) => {
 let productInBag;
 onLoad();
 
+//function to render the things on page load.
 function onLoad() {
   displayProducts();
   displayItemsInBag();
@@ -49,6 +50,7 @@ function onLoad() {
   productInBag = productStr ? JSON.parse(productStr) : [];
 }
 
+//to added the product in to the bag, from the products list
 function productAddedToBag(event, id) {
   event.preventDefault();
   let selectedSize = event.target.size.value;
@@ -69,6 +71,7 @@ function productAddedToBag(event, id) {
   bagCountDisplay();
 }
 
+//to delete the product from the bag
 function removeItem(id) {
   let productInBag = JSON.parse(localStorage.getItem("itemsInBag"));
   productInBag = productInBag.filter((item) => item.id != id);
@@ -78,6 +81,7 @@ function removeItem(id) {
   bagCountDisplay();
 }
 
+//to display products on the checkout page
 function displayItemsInBag() {
   let innerHTML = "";
   let displayContent = document.querySelector("#bagProductSummary");
@@ -91,6 +95,7 @@ function displayItemsInBag() {
   displayContent.innerHTML = innerHTML;
 }
 
+//it will paint the html for display items on checkout page
 function htmlGenerator(product) {
   return ` <div class="flex justify-end items-center">
               <p class="uppercase text-xs text-slate-600">
@@ -127,21 +132,23 @@ function htmlGenerator(product) {
             </div>  `;
 }
 
+//no of items in the bag, shown with the bag icon
 function bagCountDisplay() {
   let itemsInBag = JSON.parse(localStorage.getItem("itemsInBag"));
-
+  let length = itemsInBag.length > 0 ? itemsInBag.length : " ";
   if (!document.querySelector("#bagCount")) {
     return;
   } else {
-    document.querySelector("#bagCount").innerHTML = itemsInBag.length;
+    document.querySelector("#bagCount").innerHTML = length;
   }
   if (!document.querySelector("#bagCountSmall")) {
     return;
   } else {
-    document.querySelector("#bagCountSmall").innerHTML = itemsInBag.length;
+    document.querySelector("#bagCountSmall").innerHTML = length;
   }
 }
 
+//to display the prices on the checkout page
 function displayPriceSummary() {
   let priceSummaryDiv = document.querySelector("#priceSummary");
   if (!priceSummaryDiv) {
@@ -165,7 +172,7 @@ function displayPriceSummary() {
         "#couponCode"
       ).innerHTML = `<p class="text-sm text-slate-500">"Coupon Applied: SBI10"</p>`;
       document.querySelector("#couponButton").style.visibility = "hidden";
-      couponDiscount = (finalPrice * 10) / 100;
+      couponDiscount = Math.ceil((finalPrice * 10) / 100);
     } else {
       document.querySelector(
         "#couponCode"
