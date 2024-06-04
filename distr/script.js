@@ -44,6 +44,7 @@ function onLoad() {
   displayProducts();
   displayItemsInBag();
   displayPriceSummary();
+  bagCountDisplay();
   let productStr = localStorage.getItem("itemsInBag");
   productInBag = productStr ? JSON.parse(productStr) : [];
 }
@@ -65,6 +66,16 @@ function productAddedToBag(event, id) {
     });
   });
   localStorage.setItem("itemsInBag", JSON.stringify(productInBag));
+  bagCountDisplay();
+}
+
+function removeItem(id) {
+  let productInBag = JSON.parse(localStorage.getItem("itemsInBag"));
+  productInBag = productInBag.filter((item) => item.id != id);
+  localStorage.setItem("itemsInBag", JSON.stringify(productInBag));
+  displayItemsInBag();
+  displayPriceSummary();
+  bagCountDisplay();
 }
 
 function displayItemsInBag() {
@@ -81,18 +92,16 @@ function displayItemsInBag() {
 }
 
 function htmlGenerator(product) {
-  return `     <div class="flex justify-end items-center">
+  return ` <div class="flex justify-end items-center">
               <p class="uppercase text-xs text-slate-600">
-                <span class="hover:cursor-pointer" onclick="removeItem(product)"
+                <span class="hover:cursor-pointer" onclick="removeItem(${product.id})"
                   >remove</span
                 ><span class="mx-4 text-slate-400 text-xl">|</span
                 ><span class="hover:cursor-pointer">move to wishlist</span>
               </p>
             </div>
             <div class="flex gap-3">
-              <div
-                class="w-[20%] h-20 flex items-center "
-              >
+              <div class="w-[20%] flex items-center">
                 <img
                   src="${product.image}"
                 />
@@ -115,7 +124,22 @@ function htmlGenerator(product) {
                 </p>
                 <p class="text-sm"><b>7 days</b> return available</p>
               </div>
-            </div>`;
+            </div>  `;
+}
+
+function bagCountDisplay() {
+  let itemsInBag = JSON.parse(localStorage.getItem("itemsInBag"));
+
+  if (!document.querySelector("#bagCount")) {
+    return;
+  } else {
+    document.querySelector("#bagCount").innerHTML = itemsInBag.length;
+  }
+  if (!document.querySelector("#bagCountSmall")) {
+    return;
+  } else {
+    document.querySelector("#bagCountSmall").innerHTML = itemsInBag.length;
+  }
 }
 
 function displayPriceSummary() {
