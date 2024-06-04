@@ -21,6 +21,6 @@
     animation: marquee 5s ease-in-out infinite;
   }
   .inputStyleMan {
-    @apply bg-sky-200 w-8 p-1 text-sm font-semibold rounded-sm;
+    @apply bg-sky-200 lg:w-8 w-6 p-1 text-sm font-semibold rounded-sm;
   }
 }

@@ -37,10 +37,120 @@ imgElements.forEach((element) => {
   });
 });
 
+let productInBag;
 onLoad();
 
 function onLoad() {
   displayProducts();
+  displayItemsInBag();
+  displayPriceSummary();
+  let productStr = localStorage.getItem("itemsInBag");
+  productInBag = productStr ? JSON.parse(productStr) : [];
+}
+
+function productAddedToBag(event, id) {
+  event.preventDefault();
+  let selectedSize = event.target.size.value;
+  let productsGoingToBag = products.filter((products) => products.id == id);
+  productsGoingToBag.forEach((bagProduct) => {
+    productInBag.push({
+      id: bagProduct.id,
+      size: selectedSize,
+      image: bagProduct.image,
+      company: bagProduct.company,
+      item_name: bagProduct.item_name,
+      original_price: bagProduct.original_price,
+      current_price: bagProduct.current_price,
+      discount_percentage: bagProduct.discount_percentage,
+    });
+  });
+  localStorage.setItem("itemsInBag", JSON.stringify(productInBag));
+}
+
+function displayItemsInBag() {
+  let innerHTML = "";
+  let displayContent = document.querySelector("#bagProductSummary");
+  if (!displayContent) {
+    return;
+  }
+  let bagItemObjects = JSON.parse(localStorage.getItem("itemsInBag"));
+  bagItemObjects.forEach((bagItem) => {
+    innerHTML += htmlGenerator(bagItem);
+  });
+  displayContent.innerHTML = innerHTML;
+}
+
+function htmlGenerator(product) {
+  return `     <div class="flex justify-end items-center">
+              <p class="uppercase text-xs text-slate-600">
+                <span class="hover:cursor-pointer" onclick="removeItem(product)"
+                  >remove</span
+                ><span class="mx-4 text-slate-400 text-xl">|</span
+                ><span class="hover:cursor-pointer">move to wishlist</span>
+              </p>
+            </div>
+            <div class="flex gap-3">
+              <div
+                class="w-[20%] h-20 flex items-center "
+              >
+                <img
+                  src="${product.image}"
+                />
+              </div>
+              <div class="w-[80%] flex flex-col gap-y-1">
+                <div class="flex justify-between">
+                  <p class="font-semibold text-md">${product.company}</p>
+                </div>
+                <p class="text-xs text-slate-500">${product.item_name}</p>
+                <p class="text-xs font-semibold text-slate-500">
+                  Size: ${product.size}
+                </p>
+                <p class="text-md">
+                  <span class="font-semibold">${product.current_price}</span
+                  ><span class="mx-2 text-gray-500 line-through"
+                    >${product.original_price}</span
+                  ><span class="text-pink-500"
+                    >${product.discount_percentage} %</span
+                  >
+                </p>
+                <p class="text-sm"><b>7 days</b> return available</p>
+              </div>
+            </div>`;
+}
+
+function displayPriceSummary() {
+  let priceSummaryDiv = document.querySelector("#priceSummary");
+  if (!priceSummaryDiv) {
+    return;
+  }
+  let itemsInBag = JSON.parse(localStorage.getItem("itemsInBag"));
+  let totalItems = itemsInBag.length;
+  let totalMRP = 0;
+  let totalDiscount = 0;
+  let finalPrice = 0;
+  let couponDiscount = 0;
+
+  itemsInBag.forEach((bagItems) => {
+    totalMRP += bagItems.original_price;
+    totalDiscount += Math.ceil(
+      (bagItems.discount_percentage * bagItems.original_price) / 100
+    );
+    finalPrice = totalMRP - totalDiscount;
+  });
+  priceSummaryDiv.innerHTML = `<div>
+              <p class="uppercase text-sm font-semibold">Price details (${totalItems}) items</p>
+              <p class="text-sm text-slate-500 my-1">Total MRP</p>
+              <p class="text-sm text-slate-500 my-1">Discount on MRP</p>
+              <p class="text-sm text-slate-500 my-1">Coupon Discount</p>
+              <p class="text-sm font-semibold my-1">Total Amount</p>
+            </div>
+            <div>
+             <p class="uppercase text-sm font-semibold invisible">0</p>
+              <p class="text-sm text-slate-500 my-1"> ₹ ${totalMRP}</p>
+              <p class="text-sm text-green-500 my-1">₹ ${totalDiscount}</p>
+              <p class="text-sm text-green-500 my-1">₹ ${couponDiscount} </p>
+              <p class="text-sm font-semibold my-1">₹ ${finalPrice}</p>
+            </div>`;
 }
 
 //to display products on women page using js
@@ -75,53 +185,20 @@ function displayProducts() {
       <span class="text-orange-600 text-sm"> (${product.discount_percentage}% OFF)</span>
     </p>
      <!-- size cart -->
-              <form >
+              <form onsubmit ="productAddedToBag(event,${product.id})">
                 <p class="flex mt-2 gap-x-5">
-                  <span class="border border-black p-1"
-                    ><input
-                      type="text"
-                      value="XS"
-                      class="inputStyleMan"
-                      readonly
-                      name="size"
-                  /></span>
-                  <span class="border border-black p-1"
-                    ><input
-                      value="S"
-                      type="text"
-                     class="inputStyleMan"
-                      readonly
-                      name="size"
-                  /></span>
-                  <span class="border border-black p-1"
-                    ><input
-                      value="MD"
-                      type="text"
-                       class="inputStyleMan"
-                      readonly
-                      name="size"
-                  /></span>
-                  <span class="border border-black p-1"
-                    ><input
-                      value="LG"
-                      type="text"
-                     class="inputStyleMan"
-                      readonly
-                      name="size"
-                  /></span>
-                  <span class="border border-black p-1"
-                    ><input
-                      value="XL"
-                      type="text"
-                     class="inputStyleMan"
-                      readonly
-                      name="size"
-                  /></span>
+                <select name="size" required class=" text-white px-2 py-1 rounded-md bg-black" >
+                <option value='' selected disabled hidden >Please select your size</option>
+                  <option value="XS">XS</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                </select>
                 </p>
       <div class="mt-3">
-        <button
+        <button type="submit"
           class="uppercase bg-blue-600 text-white px-6 py-2 rounded-md"
-          onclick="addToBag( ${product.id})"
         >
           Add to Bag
         </button>
